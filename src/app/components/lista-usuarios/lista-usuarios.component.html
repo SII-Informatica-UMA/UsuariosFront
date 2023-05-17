@@ -1,0 +1,23 @@
+<div>
+  <button (click)="addUsuario()">Nuevo Usuario</button>
+</div>
+<table>
+  <thead>
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Correo electrónico</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let usuario of listaUsuarios">
+    <td>{{ usuario.nombre }}</td>
+    <td>{{ usuario.apellido1 }}</td>
+    <td>{{ usuario.email }}</td>
+    <td>
+      <button routerLink="/editar/{{usuario.id}}"> Editar</button>
+      <button (click)="eliminarUsuario(usuario.id)">Eliminar</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
