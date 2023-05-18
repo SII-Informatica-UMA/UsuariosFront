@@ -11,11 +11,18 @@ import {error} from "@angular/compiler-cli/src/transformers/util";
   styleUrls: ['./add-usuario.component.css']
 })
 export class AddUsuarioComponent {
+     nombre: string = '';
+     apellido1: string = '';
+     apellido2: string = '';
+     email: string = '';
+     dni: string = '';
+     username: string = '';
+     telefono: string = '';
 
   constructor(
-      private location: Location,
-      private router: Router,
-      private usuariosService: UsuariosService
+      public location: Location,
+      public router: Router,
+      public usuariosService: UsuariosService
     ) {
     }
 
