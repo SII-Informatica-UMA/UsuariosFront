@@ -20,7 +20,7 @@
   <label>Usuario:</label>
   <input id="username" name="username" type="text" >
 
-  <button type="submit" [disabled]="!f.valid">Agregar</button>
+  <button type="submit" (click)="send()" [disabled]="!f.valid">Agregar</button>
   <button type="button" (click)="back()">Volver</button>
 </form>
 
